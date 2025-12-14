@@ -1,42 +1,94 @@
-#🎙️ Voice Assistant (VoiceBuddy)
-📌 About the Project
+# VoiceBuddy — Python Voice Assistant
 
-VoiceBuddy is a simple Python-based voice assistant that listens to voice commands and performs everyday tasks like telling the time, searching the web, doing calculations, and opening applications.
+A simple, beginner-friendly Python voice assistant that listens to voice commands and performs everyday tasks — telling the time, searching the web, doing calculations, opening apps, and more. Built during a Python programming internship at Oasis Infobyte to explore speech recognition, text-to-speech, and basic automation.
 
-This project was built as part of my Python Programming internship at Oasis Infobyte to understand speech recognition, text-to-speech, and basic automation using Python.
+---
 
-✨ Features
+## Key Features
+- Listens to voice commands via your microphone
+- Responds with natural-sounding speech
+- Wake words supported (e.g., “Hello” or “Hey Buddy”)
+- Tells current time and date
+- Performs web searches and opens web pages
+- Executes basic spoken calculations
+- Tells random jokes
+- Opens system calculator (where applicable)
+- Echoes/repeats user phrases
+- Microphone calibration for better handling of background noise
+- Graceful shutdown on voice command
 
-Listens to voice commands using your microphone
+---
 
-Responds using a natural-sounding voice
+## Technologies Used
+- Python 3
+- SpeechRecognition — speech-to-text
+- pyttsx3 — text-to-speech
+- webbrowser — open URLs and search results
+- pyperclip (optional) — clipboard handling
 
-Greets the user with a wake word (Hello or Hey Buddy)
+---
 
-Tells the current time and date
+## Prerequisites
+- Python 3.7+ installed
+- A working microphone and audio drivers
+- (Optional) A virtual environment for isolating dependencies
 
-Searches the web using voice commands
+---
 
-Performs basic calculations using voice input
+## Installation
+1. Clone the repository:
+   git clone https://github.com/SAIKIRANBIRADAR/OASIS_INFOBYTE.git
 
-Tells random jokes
+2. Create and activate a virtual environment (recommended):
+   python -m venv venv
+   source venv/bin/activate  # macOS/Linux
+   venv\Scripts\activate     # Windows
 
-Opens the system calculator
+3. Install required Python packages:
+   pip install SpeechRecognition pyttsx3 pyperclip
 
-Repeats phrases spoken by the user
+4. Ensure your system's microphone is accessible and configured.
 
-Handles background noise better with microphone calibration
+---
 
-Shuts down politely on voice command
+## Running the Assistant
+- Run the main script (replace with actual filename if different):
+  python voice_assistant.py
 
-🛠️ Technologies Used
+- The assistant will greet you and listen for the wake word. Speak clearly and allow a short pause after commands.
 
-Python 3
+---
 
-SpeechRecognition – for converting speech to text
+## Example Voice Commands
+- "Hello" / "Hey Buddy" — wake and start interaction  
+- "What time is it?" — current time  
+- "What's the date today?" — current date  
+- "Search for Python tutorials" — opens browser search results  
+- "Calculate five plus seven" — basic arithmetic  
+- "Tell me a joke" — hears a joke response  
+- "Open calculator" — opens system calculator (if supported)  
+- "Repeat after me: <phrase>" — assistant repeats the phrase  
+- "Goodbye" / "Shut down" — exit the assistant politely
 
-pyttsx3 – for text-to-speech output
+---
 
-webbrowser – for web searches
+## Tips & Troubleshooting
+- If the assistant struggles to hear you:
+  - Run microphone calibration (if available)
+  - Move closer to the mic and reduce background noise
+  - Check system microphone permissions
+- For noisy environments, increase the recognizer’s energy threshold or use calibration routines.
+- If web searches or opening apps fail, verify default applications and network connectivity.
 
-pyperclip (optional) – for clipboard support
+---
+
+## Contributing
+Contributions are welcome — improvements to recognition, new commands, packaging, or better cross-platform support are great additions. Create issues or pull requests with clear descriptions and steps to reproduce.
+
+---
+
+## License & Contact
+- This project was created as part of an internship. Add a LICENSE file if you wish to open-source it.
+- For questions or feedback, contact the author via the repository profile.
+
+Enjoy experimenting with VoiceBuddy — a compact, hands-free assistant to learn speech and automation basics!
